@@ -1,0 +1,13 @@
+<!doctype html>
+<meta charset="utf-8" />
+<title>lynqa widget example</title>
+<form action="/submit" method="post">
+  <div class="lynqa-captcha" data-sitekey="YOUR_SITEKEY" data-callback="onLynqa"></div>
+  <button type="submit">Continue</button>
+</form>
+<script>
+  function onLynqa(token) {
+    console.log("verified, token in lynqa-captcha-response field:", token)
+  }
+</script>
+<script type="module" src="https://esm.sh/lynqa"></script>
